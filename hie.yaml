@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "mygoto:lib"
+
+    - path: "./app/Main.hs"
+      component: "mygoto:exe:mygoto-exe"
+
+    - path: "./app/Paths_mygoto.hs"
+      component: "mygoto:exe:mygoto-exe"
+
+    - path: "./test"
+      component: "mygoto:test:mygoto-test"
