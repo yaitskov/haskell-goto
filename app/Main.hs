@@ -7,7 +7,7 @@ import UnliftIO.IORef
 
 data B = B deriving (Eq, Show)
 data A = A deriving (Eq, Show)
-data C = C deriving (Eq, Show)
+
 
 main :: IO ()
 main = do
@@ -16,7 +16,7 @@ main = do
     liftIO $ putStrLn "B body"
     label A $ do
       liftIO $ putStrLn "A body"
-      label C $ do
+      label "C" $ do
         readIORef xr >>= \case
          10 -> liftIO $ putStrLn "END"
          x -> do
